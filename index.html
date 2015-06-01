@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>our nursery</title>
+		<title>house</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -58,7 +58,7 @@
 				document.body.appendChild( container );
 
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.z = 100;
+				camera.position.z = 300;
 
 				// scene
 
@@ -87,12 +87,13 @@
 				THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 
 				var loader = new THREE.OBJMTLLoader();
-				loader.load( 'Untitled2.obj', 'Untitled2.obj.mtl', function ( object ) {
+				loader.load( 'bettar_nursary.obj', 'bettar_nursary.mtl', function ( object ) {
 
-					var scale = 40
+					var scale = 20
 					obj = object
 
-					object.rotateX(Math.PI)
+					object.rotateX(Math.PI * -1.0)
+					object.rotateY(Math.PI * 2.0)
 
 					object.scale.set( scale, scale, scale );
 
